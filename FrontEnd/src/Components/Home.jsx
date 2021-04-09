@@ -11,7 +11,7 @@ const [blog, setBlog] = useState([]);
     body: "",
     imgLink: "",
   };
-
+  
   useEffect(() => {
     axios
       .get("http://localhost:4000/")
@@ -28,6 +28,7 @@ const [blog, setBlog] = useState([]);
         console.log(error);
       });
   }, []);
+
 return(
   blog.map((obj, idx) => {
     return (

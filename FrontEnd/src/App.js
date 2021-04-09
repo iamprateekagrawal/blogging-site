@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import AddBlog from "./Components/AddBlog";
@@ -11,8 +11,8 @@ import DeleteBlog from "./Components/DeleteBlog";
 function App() {
   return (
     <>
-      <Router basename={process.env.PUBLIC_URL}>
-        <NavBar />
+      <NavBar />
+      <Router>
         <Route path="/home" component={Home} />
         <Route exact path="/add" component={AddBlog} />
         <Route path="/blog" component={ShowBlog} />

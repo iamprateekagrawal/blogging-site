@@ -31,6 +31,7 @@ app.get('/', async (req, res) => {
         const resData = await Blog.find();
         res.send(resData);
     }catch(err){
+        console.log("No, here");
         res.send(err)
     }
 })
